@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+
 import org.springframework.web.bind.annotation.RestController;
 
 import com.swag.test.domain.Users;
@@ -21,12 +21,12 @@ public class UserController {
 	@Autowired private UserJPARepository userJpaRepository;
 	
 	
-	  @RequestMapping(value = "/all", method = RequestMethod.GET)
+	  @GetMapping(value = "/all")
 	    public List<Users> all() {
 	        return userJpaRepository.findAll();
 	    }
 
-	  @RequestMapping(value = "/{givenName}", method = RequestMethod.GET)
+	  @GetMapping(value = "/{givenName}")
 	    public Users byName(@PathVariable final
 	    		  String givenName) {
 	        return userJpaRepository.findByName(givenName);
