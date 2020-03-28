@@ -10,7 +10,7 @@ VOLUME /tmp
 # Make port 8080 available to the world outside this container
 EXPOSE 8080
 
-ARG JAR_FILE=target/swaggerTest-1.0.jar
+ARG JAR_FILE=target/swaggerTest-1.1.jar
 
 ADD ${JAR_FILE} /.
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/swaggerTest-1.0.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/swaggerTest-1.1.jar"]
