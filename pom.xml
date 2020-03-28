@@ -16,7 +16,10 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<sonar.sources>pom.xml,src/main/**</sonar.sources>
+                <sonar.projectKey>ucbabu_SwaggerTest</sonar.projectKey>
+  		<sonar.organization>ucbabu</sonar.organization>
+  		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  		<sonar.login>d75eeee9496ecf981b711b8b4284cbeabd338980</sonar.login>
 	</properties>
 
 	<dependencies>
